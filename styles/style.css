@@ -1,0 +1,330 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/** Body display: flexbox **/
+
+body {
+    font-family: sans-serif;
+}
+* {
+     box-sizing: border-box;   
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin-left: 12rem;
+    min-height: 100%;
+}
+
+body > header {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 10rem);
+    right: 0;
+    text-align: center;
+    padding: 5px;
+    background-color: white;
+    z-index: 1000;
+}
+body > header input {
+    width: 50%;
+    font-size: 90%;
+}
+
+
+/** Bandeau sur le côté **/
+
+nav {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: auto;
+    background-color: white;
+    min-width: 14rem;
+    box-shadow: 5px 0px 20px 6px #888;
+    z-index: 1001;
+}
+
+nav li {
+    padding: 5px 10px; 
+    cursor: pointer;
+}
+.masque {
+    color: #707070;
+    font-style: italic;
+}
+.fa-eye-slash {
+    display: none;   
+}
+.masque .fa-eye {
+    display: none;   
+}
+.masque .fa-eye-slash {
+    display: inline;   
+}
+        
+/** Boutons de l'interface **/
+
+nav header {
+    margin: 10px 0;
+    text-align: center;   
+}
+
+button {
+    margin: 0 2px;  
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px !important;
+}
+button:active, button:focus {
+    border: none;   
+}
+
+
+#btnNouvelleRelation {
+    margin-top: 10px;
+    
+}
+#btNouvelleRelation:before {
+    content: '+';
+    position: absolute;
+}
+
+/** Classes génériques **/
+
+.hidden {
+    display: none;   
+}
+
+
+/**** Fenetre pour ouvrir un projet ***/
+
+body > aside {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 20000;
+    background: rgba(0,0,0,0.5);
+}
+
+body > aside > div {
+    width: 40vw;
+    height: 60vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    border: none;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: white;
+}
+
+body > aside > div > h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: bold;
+}   
+body > aside > div > h3:not(:first-of-type) {
+    margin-top: 40px;
+}
+body > aside > div ul {
+    margin-right: 20px !important;   
+}
+body > aside > div li {
+    cursor: pointer;
+    margin: 5px 0 5px 10px;
+    padding: 5px;
+}
+body > aside > div li button {
+    float: right;
+    display: none;
+}
+body > aside > div li:hover {
+    background-color: lightgray;   
+}
+body > aside > div li:hover button {
+    display: inline;
+}
+body > aside > div .btnFermer {
+    position: absolute;   
+    top: 5px;
+    right: 5px;
+}
+
+
+
+/************************************ 
+ *              Relations
+ ************************************/
+        
+.relation {
+    border: solid 2px darkslateblue;
+    min-width: 100px;
+    position: relative;
+    margin: 3rem;
+}
+.relation:before {
+    content: attr(data-nom);
+    display: block;
+    position: absolute;
+    top: calc(-1.1rem - 0.4rem);
+    left: -2px;
+    color: white;
+    text-align: center;
+    background-color: darkslateblue;
+    font-weight: bold;
+    font-size: 110%;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.4rem 0.4rem 0 0;
+}
+
+
+.btnAjouter:before {
+    content: '\271A';
+    color: blue;
+}
+.btnSupprimer:before {
+    content: '\2716';
+}
+[class^="btn"]:before {
+    cursor: pointer !important;   
+    margin: 1px;
+}
+
+
+table th[data-nom]:before {
+    content: attr(data-nom);   
+}
+table th:not(:last-child) {
+    min-width: 100px;
+    color:white;
+    background-color: darkslategrey;
+    position: relative;
+}
+ 
+li .btnSupprimer {
+    color: red;
+    right: 2px;
+    width: 15px;
+    height: 15px;
+    border: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 0 1px;
+    text-align: center;
+    line-height: 14px;
+    vertical-align: middle;
+    font-size: 12px;
+    display: none;
+    float: right;
+}
+li:hover .btnSupprimer {
+    display: block;
+}
+
+
+.relation tr > * {
+    padding: 2px;   
+}
+
+.relation tr > * {
+    border-left: solid 1px #000;   
+}
+.relation tr:last-child > td {
+    border-top: solid 1px #000;
+}
+
+.relation tr:nth-child(even) {
+    background-color: #E0E0E0;   
+}
+.relation tr td input {
+    background-color: transparent;
+    border: none;
+}
+.relation tr:last-of-type {
+    background-color: transparent !important;   
+}
+
+    
+
+.relation tr:hover td.btnSupprimer {
+    color: red;
+}
+.relation td.btnSupprimer {
+    color: transparent;
+}
+
+.relation .btnAjouter[colspan="0"] {
+    display: none !important;   
+}
+
+.relation th span.btnSupprimer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: red;
+    font-size: 12px;
+    margin: 2px;
+    display: none;
+}
+.relation th:hover span.btnSupprimer {
+    display: block;
+}
+        
+
+

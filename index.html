@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Théorie relationnelle</title>
+    <script src="js/Relation.js"></script>
+    <script src="js/Parser.js"></script>
+    <script src="js/Interpreter.js"></script>
+    <script src="js/Projet.js"></script>
+    <script src="js/ihm.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+    <nav>
+        <header>
+            <button id="btnNouveau" class="fa fa-file-o" title="Nouveau projet"></button>
+            <button id="btnOuvrir" class="fa fa-folder-open-o" title="Ouvrir un projet"></button>
+            <button id="btnSauvegarder" class="fa fa-save" title="Sauvegarder le projet"></button>
+        </header>
+        <ul></ul>
+        <button id="btnNouvelleRelation" class="fa fa-plus-square" title="Nouvelle relation"></button>
+    </nav>
+    <header>
+        <input type="text" id="query" list="historique">
+        <datalist id="historique">
+        </datalist>
+        <button id="btnExecuter" class="fa fa-play" title="Exécuter la requête"></button>
+    </header>
+    <main></main>
+    <aside class="hidden">
+        <div>
+            <h3>Importer un modèle d'exemple</h3>
+            <ul>
+            </ul>
+            <h3>Ouvrir un projet enregistré</h3>
+            <ul>
+            </ul>
+            <button class="btnFermer fa fa-close"></button>
+        </div>
+    </aside>
+</body>
+
+</html>
