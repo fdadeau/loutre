@@ -74,7 +74,7 @@ function Relation(nom) {
     this.extraireEnregistrement = function(i) {
         var enr = {};
         for (var att in this.contenu) {
-            if (! this.contenu[att][i]) {
+            if (this.contenu[att][i] === undefined) {
                 return {};   
             }
             enr[att] = this.contenu[att][i];   

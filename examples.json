@@ -42,7 +42,7 @@
         },
         "MODULE": {
             "CodeModule": [ "BD_L1", "APOO_L1", "TCIP_L3" ],
-            "LibelleModule": [ "Bases de données", "Algo et POO", "Techniques de communication"],
+            "LibelleModule": [ "Bases de données", "Algo et POO", "Techniques de communication" ],
             "VolumeCM": [ 18, 21, 9 ],
             "VolumeTD": [ 18, 15, 0 ],
             "VolumeTP": [ 18, 18, 18 ],

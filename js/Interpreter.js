@@ -380,6 +380,7 @@ function Interpreter() {
                     nombre: enr[expr.attribut]
                 };
             }
+            console.log(enr);
             throw `L'attribut ${expr.attribut} n'existe pas dans la relation ${rel1}`;
         }
         if (expr.op !== undefined) {
