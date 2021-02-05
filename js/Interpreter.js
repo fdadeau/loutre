@@ -39,7 +39,7 @@ function Interpreter() {
             throw "Les deux relations doivent avoir le même dégré.";
         }
         for (var i in operande1.contenu) {
-            if (!operande2.contenu[i]) {
+            if (!operande2.possedeAttribut(i)) {
                 throw "Opération impossible : les deux relations n'ont pas les mêmes attributs.";
             }
             res[i] = [];
@@ -385,6 +385,7 @@ function Interpreter() {
         }
         if (expr.op !== undefined) {
             var operandes = expr.operandes.map(e => evaluate(e, enr, rel1, rel2));
+            console.log(operandes);
             switch (expr.op) {
                 case "=":
                     var type = Object.keys(operandes[0])[0];

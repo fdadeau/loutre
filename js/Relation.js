@@ -82,7 +82,7 @@ function Relation(nom) {
         return enr;
     }
     
-    // teste sur l'enregistrement existe dans la relation
+    // teste si l'enregistrement existe dans la relation
     this.contient = function(enr) {
         var entete = this.entete();
         for (var i=0; i < this.cardinalite(); i++) {
@@ -127,6 +127,25 @@ function Relation(nom) {
         }
         return -1;
     }
+    
+    /** 
+     *  Verifie si la relation possède l'attribut passé en paramètre.
+     *  Cas problématiques : att possède un préfixe
+     */
+    this.possedeAttribut = function(att) {
+        if (att.indexOf(".") > 0) {
+            att = att.split(".")[1];   
+        }
+        for (var a in this.contenu) {
+            if (a.indexOf(".") > 0) {
+                a = a.split(".")[1];   
+            }
+            if (a == att) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     
     // export 
@@ -136,7 +155,16 @@ function Relation(nom) {
     
     // import
     this.import = function(data) {
-        this.contenu = data.contenu;
+        var keys = Object.keys(data.contenu);
+        for (var att in data.contenu) {
+            // si attribut préfixé, mais aucun autre attribut n'a le même nom (sans préfixe), on retire le préfixe inutile)
+            if (att.split(".").length == 2 && keys.every(e => e == att || !e.endsWith("." + att.split(".")[1]))) {
+                this.contenu[att.split(".")[1]] = data.contenu[att];
+            }
+            else {
+                this.contenu[att] = data.contenu[att];   
+            }
+        }
         this.setVisible(data.visible);
         this.render();
     }

@@ -359,6 +359,9 @@ document.addEventListener("DOMContentLoaded", function (_e) {
                 if (!relations[commande.relation2]) {
                     throw `La relation ${commande.relation2} n'existe pas.`;
                 }
+                if (commande.relation1 == commande.relation2) {
+                    throw `Impossible d'effectuer une jointure entre une relation et elle-même.\nFaites d'abord une copie avec la syntaxe New = Source.`;
+                }
                 return interpreter.applyJointure(commande, relations[commande.relation1], relations[commande.relation2]);
             case "division":
                 if (!relations[commande.relation1]) {
