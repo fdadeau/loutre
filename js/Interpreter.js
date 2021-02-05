@@ -380,7 +380,7 @@ function Interpreter() {
                     nombre: enr[expr.attribut]
                 };
             }
-            throw `L'attribut ${expr.attribut} n'existe pas dans la relation ${rel}`;
+            throw `L'attribut ${expr.attribut} n'existe pas dans la relation ${rel1}`;
         }
         if (expr.op !== undefined) {
             var operandes = expr.operandes.map(e => evaluate(e, enr, rel1, rel2));
