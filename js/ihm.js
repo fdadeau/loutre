@@ -165,6 +165,7 @@ document.addEventListener("DOMContentLoaded", function (_e) {
             // création de la relation résultat
             workspace.creer(commande.resultat, { contenu: contenu, visible: true });
             var main = document.querySelector("main");
+            workspace.relations[commande.resultat].setFormule(document.getElementById("query").value);
             main.insertBefore(workspace.relations[commande.resultat].element, main.firstChild);
             workspace.miseAJour();
             // ajout dans l'historique

@@ -216,6 +216,7 @@ body > aside > div .btnFermer {
     border: solid 2px darkslateblue;
     min-width: 100px;
     position: relative;
+    overflow-y: visible;
     margin: 3rem;
 }
 .relation:before {
@@ -232,7 +233,13 @@ body > aside > div .btnFermer {
     padding: 0.2rem 0.4rem;
     border-radius: 0.4rem 0.4rem 0 0;
 }
-
+.relation[data-formule]:after {
+    display: block;
+    position: absolute; 
+    bottom: -20px;
+    width: 70vw;
+    content: 'Obtenu avec ' attr(data-formule);
+}
 
 .btnAjouter:before {
     content: '\271A';

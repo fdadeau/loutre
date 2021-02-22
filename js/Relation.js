@@ -7,6 +7,8 @@ function Relation(nom) {
     // nom de la relation
     this.nom = nom;
 
+    this.formula = "";
+    
     // contenu de la relation: map (nom colonne -> tableau de valeurs)
     this.contenu = {};  // format : { att1 => [ v1-1, v1-2, v1-3, ... ], att2 => [ v2-1, v2-2, v2-3, ... ] };
 
@@ -309,6 +311,11 @@ function Relation(nom) {
         else {
             this.element.classList.add("hidden");
         }
+    }
+    
+    this.setFormule = function(f) {
+        this.formula = f;
+        this.element.dataset.formule = f;
     }
 
 }
