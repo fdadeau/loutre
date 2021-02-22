@@ -157,7 +157,8 @@ document.addEventListener("DOMContentLoaded", function (_e) {
     
     document.getElementById("btnExecuter").addEventListener("click", function(e) {
         try {
-            var commande = parser.parse(document.getElementById("query").value);
+            var query = document.getElementById("query").value
+            var commande = parser.parse(query);
             if (workspace.existe(commande.resultat)) {
                 throw `La relation ${commande.resultat} existe déjà dans le projet.`;       
             }
@@ -165,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function (_e) {
             // création de la relation résultat
             workspace.creer(commande.resultat, { contenu: contenu, visible: true });
             var main = document.querySelector("main");
-            workspace.relations[commande.resultat].setFormule(document.getElementById("query").value);
+            workspace.relations[commande.resultat].setFormule(query.substr(query.indexOf("=")+1).trim());
             main.insertBefore(workspace.relations[commande.resultat].element, main.firstChild);
             workspace.miseAJour();
             // ajout dans l'historique

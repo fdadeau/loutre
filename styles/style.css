@@ -237,8 +237,9 @@ body > aside > div .btnFermer {
     display: block;
     position: absolute; 
     bottom: -20px;
+    font-size: 80%;
     width: 70vw;
-    content: 'Obtenu avec ' attr(data-formule);
+    content: 'Obtenu par : ' attr(data-formule);
 }
 
 .btnAjouter:before {
