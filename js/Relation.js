@@ -7,7 +7,7 @@ function Relation(nom) {
     // nom de la relation
     this.nom = nom;
 
-    this.formula = "";
+    this.formula = null;
     
     // contenu de la relation: map (nom colonne -> tableau de valeurs)
     this.contenu = {};  // format : { att1 => [ v1-1, v1-2, v1-3, ... ], att2 => [ v2-1, v2-2, v2-3, ... ] };
@@ -152,7 +152,7 @@ function Relation(nom) {
     
     // export 
     this.export = function() {
-        return { contenu: this.contenu, visible: this.isVisible() };
+        return { contenu: this.contenu, visible: this.isVisible(), formula: this.formula };
     }
     
     // import
@@ -168,6 +168,9 @@ function Relation(nom) {
             }
         }
         this.setVisible(data.visible);
+        if (data.formula) {
+            this.setFormule(data.formula);   
+        }
         this.render();
     }
     
@@ -241,6 +244,9 @@ function Relation(nom) {
         var elem = document.createElement("div");
         elem.className = "relation";
         elem.dataset["nom"] = nom;
+        if (this.formula) {
+            elem.dataset["formule"] = this.formula;
+        }
 
         var that = this;
         elem.addEventListener("click", function(e) {
