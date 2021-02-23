@@ -369,11 +369,14 @@ footer code {
     color: black;
     border-radius: 5px;
 }
+footer code[title] {
+    cursor: copy;   
+}
 footer h3 {
     margin: 30px 0 10px 0;
     padding: 10px 10px 5px 10px;
     background-color: white;
-    color: #556677;
+    color: #000; /*#556677;*/
     font-weight: bold;
 }
 footer p {
@@ -386,9 +389,13 @@ footer ul {
 footer button {
     display: block;
     margin: 20px auto;
-    width: 100px;
+    width: 70px;
+    padding: 5px;
     font-size: 16px !important;
     border: solid 1px #000;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+footer li {
+    margin: 10px;   
 }
