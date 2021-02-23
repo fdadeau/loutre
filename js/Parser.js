@@ -153,7 +153,7 @@ function Parser() {
 
 
         if (!ret.operation) {
-            throw "Erreur de syntaxe: commande non reconnue.\nToutes les commandes sont de la forme : \nRELATION = EXPRESSION où RELATION est le nom de la nouvelle relation créée et EXPRESSION est d'une des formes suivantes :\n - R1 UNION R2\n - R1 INTER R2\n - R1 MINUS R2\n - R1 x R2\n - S(condition)R1 \n - [ attr1, attri2, ... ]R2 \n - R1[ condition ] R2 \n - R1 div R2 \n - R1 [ R1.x,... / R2.y,... ] R2 \n où R1 et R2 sont des relations existantes. ";   
+            throw "Erreur de syntaxe: commande non reconnue.\n\nReportez-vous à l'aide sur la syntaxe, disponible en cliquant sur le point d'interrogation en haut à droite de l'écran.";   
         }
     }
 

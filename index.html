@@ -28,6 +28,7 @@
         <datalist id="historique">
         </datalist>
         <button id="btnExecuter" class="fa fa-play" title="Exécuter la requête"></button>
+        <button id="btnHelp" class="fa fa-question-circle" title="Aide" style="float: right;" onclick="document.body.classList.toggle('help')"></button> 
     </header>
     <main></main>
     <aside class="hidden">
@@ -41,6 +42,129 @@
             <button class="btnFermer fa fa-close"></button>
         </div>
     </aside>
+    <footer>
+        <H2>Syntaxe des requêtes</H2>
+        <p>Nous donnons ci-dessous la syntaxe des requêtes avec des exemples illustratifs. </p>
+        <h3>Affectation</h3>
+        <p>Toutes les requêtes sont écrites comme des affectations de la forme <br>
+            <code>Resultat = ... opération ...</code>
+            <br>de façon à ce que le résultat puisse être enregistré dans une nouvelle relation, avec un nom unique. <br>
+        Les noms de relations commencent par une lettre majuscule ou minuscule et 
+        contiennent des lettres, des chiffres ou le caractère underscore _ </p>
+        
+        <h3>Copier une relation</h3>
+        
+        <p>La copie d'une relation se réalise en affectant au résultat une relation existante. </p>
+        
+        <p>Exemple : <code>R2 = R1</code> créé une nouvelle relation <code>R2</code> contenant les attributs et les enregistrements de <code>R1</code>.</p>
+        
+        <h3>Union, intersection différence</h3>
+        <p>Ces trois opérateurs s'écrivent respectivement <code>union</code>, <code>inter</code>, <code>minus</code>. </p>
+        
+        <p>Exemples : <code>R3 = R1 union R2</code> créé une relation <code>R3</code> qui est l'union de <code>R1</code> et de <code>R2</code>. </p>
+        
+        <p>Deux remarques : </p>
+        <ul>
+            <li>Pour pouvoir s'appliquer, les opérandes doivent avoir les mêmes attributs (c'est-à-dire les mêmes noms d'attributs). </li>
+            <li>Chacun de ces opérateurs peut être écrit en minscule ou en majuscule (ou un miXe DeS DeuX). </li>
+        </ul>
+        
+        <h3>Produit cartésien</h3>
+        
+        <p>Le produit cartésien est réalisé par le mot-clé <code>pcart</code> (insensible à la casse). </p>
+        
+        <p>Exemple : <code>R3 = R1 pcart R2</code> créé une relation <code>R3</code> résultant du produit cartésien de <code>R1</code> par <code>R2</code>. </p>
+        
+        
+        <h3>Sélection</h3>
+        
+        <p>La sélection permet de filtrer les enregistrements d'une relation pour ne conserveur que ceux satisfaisant un certain 
+            critère de sélection. </p>
+        
+        <p>Exemple : <code>R2 = S( ...critère de sélection... ) R1</code></p>
+        
+        <p>Prenez garde à bien utiliser la syntaxe <code>S(</code> (sans espace entre le S et la parenthèse ouvrante) pour désigner
+            l'opération de sélection. </p>
+        
+        <p>Le critère de sélection est une expression booléenne de type : </p>
+        
+        <ul>
+            <li>comparaison entre attributs et/ou valeurs : égalité <code>=</code>, inégalité <code>&lt;&gt;</code>, inférieur strict 
+                <code>&lt;</code> (pour des attributs/valeurs numériques), inférieur ou égal <code>&lt;=</code>, supérieur strict <code>&gt;</code>, supérieur ou égal <code>&gt;=</code> </li>
+            <li>expression logique : conjonction <code>&amp;&amp;</code>, disjonction <code>||</code> entre expressions booléennes</li>
+        </ul>
+        
+        <p>Dans le cas où l'une des opérande serait une constante représentant une chaîne de caractères, celle-ci doit être délimitée par des guillemets doubles. </p>
+        
+        <P>Exemple : <code>R2 = S(Prenom = "Marie" || Prenom = "Cynthia")R1</code> créé une relation <code>R2</code> à partir de la relation <code>R1</code>
+            où seuls sont conservés les enregistrements dont l'attribut <code>Prenom</code> est égal à la chaîne de caractère <code>Marie</code> ou <code>Cynthia</code>.
+        </P>
+        
+        <p>Attention, les majuscules dans les noms des attributs ou les valeurs des chaînes ont leur importance. </p>
+        
+        <h3>Projection</h3>
+        
+        <p>La projection permet ne garder qu'un sous-ensemble des attributs d'une relation. </p>
+        
+        <p>La syntaxe <code>R2 = [att1, att2] R1</code> créé une relation <code>R2</code> par projection de la relation 
+        <code>R1</code> sur les attributs <code>att1</code> et <code>att2</code>. </p>
+        
+        <p>Les majuscules/minuscules ont leur importance dans le nom des attributs demandés. </p>
+        
+        
+        <h3>Jointures internes</h3>
+
+        <p>L'opération de jointure s'exprime avec la syntaxe : <code>R3 = R1 [R1.attA=R2.attB] R2</code> qui va créer
+        une nouvelle relation <code>R3</code> qui sera le résultat de la jointure de <code>R1</code> avec <code>R2</code>
+        en respectant le critère de jointure associé. </p>
+        
+        <p>Quelques remarques :</p>
+        
+        <ul>
+            <li>dans le critère de jointure, s'il n'y a pas d'ambigüité sur les noms des attributs concernés, alors il n'est pas
+            nécessaire de les préfixer par le nom de leur relation d'origine. <br>
+            Exemple : si on suppose que <code>attA</code> et <code>attB</code> sont uniques, on peut écrire l'exemple précédent 
+            avec <code>R3 = R1[attA=attB]R2</code></li>
+            <li><code>R3 = R1[attA=attB]R2</code> est équivalent à <code>R3=R2[attA=attB]R1</code>, même 
+            si la présentation du résultat ne sera pas la même (rappel : dans une relation, il n'y a pas d'ordre pour 
+                les attributs, ni pour les enregistrements). </li>
+            <li>pour réaliser une jointure naturelle sur un attribut on écrira juste <code>[</code> le nom de l'attribut entre les 
+            crochets <code>]</code>. <br>
+            Exemple : <code>R3 = R1[attC]R2</code> (on suppose que <code>attC</code> est commun à <code>R1</code> et <code>R2</code>)</li>
+            <li>on peut réaliser une &theta;-jointure, en remplaçant l'égalité du critère de jointure par n'importe quel 
+            prédicat respectant la syntaxe décrite dans la section précédente. </li>
+        </ul>
+        
+        <h3>Jointures externes</h3>
+        
+        <p>Les jointures externes se décrivent en rajoutant un <code>+</code> entre le nom de la relation et le crochet, 
+        du côté de la relation dont on souhaite conserver tous les enregistrements, même ceux pour lesquels ils n'existe 
+        pas de possibilité de satisfaire le critère de jointure. </p>
+        
+        <p>Exemple : <code>R3 = R1+[R1.attA = R2.attB]R2</code> permet de réaliser une jointure externe à gauche. </p>
+        
+        <h3>Division</h3>
+        
+        <p>La syntaxe <code>R3 = R1 [ L1 / L2 ] R2</code> permet de réaliser la division de <code>R1</code> par <code>R2</code>
+            par rapport aux listes d'attributs <code>L1</code> (issus de <code>R1</code>) et <code>L2</code> (issus de <code>L2</code>).</p>
+        
+        <p>Exemple : <code>R3 = R1[ R1.NoEtudiant / R2.NoEtudiant] R2</code> permet de récupérer 
+            dans <code>R3</code> créé une relation contenant tous les attributs de <code>R1</code> sauf <code>NoEtudiant</code> et
+            contenant des enregistrements qui, suffixés au <code>NoEtudiant</code> issus de <code>R2</code> étaient tous présents 
+            dans <code>R1</code>. </p>
+        
+        <p>Quelques remarques :</p>
+        <ul>
+            <li>Les deux listes d'attributs <code>L1</code> et <code>L2</code> doivent faire la même taille et 
+                présenter les attributs mis en correspondance dans le même ordre. </li>
+            <li>La syntaxe <code>R3 = R1 DIV R2</code> est un raccourci pour la syntaxe précédente qui réalise la division 
+                par rapport aux attributs communs de <code>R1</code> et <code>R2</code>. </li>
+        </ul>
+        
+        
+        <button class="btnFermer" onclick="document.body.classList.remove('help')">Fermer</button>
+        
+    </footer>
 </body>
 
 </html>

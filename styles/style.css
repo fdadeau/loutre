@@ -336,3 +336,59 @@ li:hover .btnSupprimer {
         
 
 
+
+/*** Page d'aide ***/
+footer {
+    display: none;
+    position: fixed;
+    z-index: 100000;
+    background: #556677;
+    color: white;
+    line-height: 1.4;
+    border: solid 2px #000;
+    box-shadow: 10px 10px 10px #000;
+    width: 75vw;
+    height: 90vh;
+    top: 8vh;
+    right: 5vw;
+    overflow: scroll;
+}
+.help footer {
+    display: block;
+}
+footer h2 {
+    font-size: 130%;
+    text-align: center;
+    margin: 20px 0;
+}
+footer code {
+    font-family: monospace;
+    font-size: 120%;
+    padding: 2px 5px;
+    background-color: lightgrey;
+    color: black;
+    border-radius: 5px;
+}
+footer h3 {
+    margin: 30px 0 10px 0;
+    padding: 10px 10px 5px 10px;
+    background-color: white;
+    color: #556677;
+    font-weight: bold;
+}
+footer p {
+    margin: 5px 10px 10px 10px;   
+}
+footer ul {
+    margin-left: 30px;
+    list-style-type: disc;
+}
+footer button {
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    font-size: 16px !important;
+    border: solid 1px #000;
+    background-color: white;
+    border-radius: 10px;
+}

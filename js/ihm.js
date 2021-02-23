@@ -153,6 +153,15 @@ document.addEventListener("DOMContentLoaded", function (_e) {
     });
     
     
+    /** Ecouteur pour copier les exemples **/
+    document.querySelector("footer").addEventListener("dblclick", function(e) {
+        if (e.target.tagName == "CODE" && e.target.innerHTML.indexOf("=") > 0) {
+            document.getElementById("query").value = e.target.innerHTML;
+        }
+    });
+    
+    
+    
     var parser = new Parser();
     
     document.getElementById("btnExecuter").addEventListener("click", function(e) {
