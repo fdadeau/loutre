@@ -409,10 +409,10 @@ footer ul {
 }
 footer button {
     display: block;
-    margin: 20px auto;
+    margin: 20px auto 10px auto;
     width: 70px;
-    padding: 5px;
-    font-size: 16px !important;
+    padding: 2px;
+    font-size: 12px !important;
     border: solid 1px #000;
     background-color: white;
     border-radius: 5px;
