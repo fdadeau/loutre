@@ -349,8 +349,8 @@ footer {
     box-shadow: 10px 10px 10px #000;
     width: 96vw;
     height: 90vh;
-    margin-top: 6vh;
-    margin-right: 2vw;
+    top: 6vh;
+    right: 2vw;
     overflow: scroll;
 }
 .help footer {
