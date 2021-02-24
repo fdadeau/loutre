@@ -347,17 +347,38 @@ footer {
     line-height: 1.4;
     border: solid 2px #000;
     box-shadow: 10px 10px 10px #000;
-    width: calc(90vw - 14rem);
+    width: 96vw;
     height: 90vh;
-    top: 8vh;
-    right: 5vw;
+    top: 6vh;
+    right: 2vw;
     overflow: scroll;
 }
 .help footer {
     display: block;
 }
+
+footer h1 {
+    font-size: 32px;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000000, 
+                ;
+}
+footer h1:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    height: 9vw;
+    width: 9vw;
+    background-image: url('../images/mauricette.jpg');
+    background-size: cover;
+    border-radius: 50%;
+}
 footer h2 {
-    font-size: 130%;
+    font-size: 120%;
     text-align: center;
     margin: 20px 0;
 }
