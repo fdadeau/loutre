@@ -347,7 +347,7 @@ footer {
     line-height: 1.4;
     border: solid 2px #000;
     box-shadow: 10px 10px 10px #000;
-    width: 75vw;
+    width: calc(90vw - 14rem);
     height: 90vh;
     top: 8vh;
     right: 5vw;
