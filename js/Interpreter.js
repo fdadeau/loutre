@@ -366,7 +366,7 @@ function Interpreter() {
                     };
                 } else if (enr[a[1]] && (rel1 == a[0] || rel2 == a[0])) {
                     // prefixe de la relation courante
-                    return (enr[a[1]].match && !enr[a[1]].match(/[\d]+$/gi)) ? {
+                    return (enr[a[1]].match && !enr[a[1]].match(/^[\d]+$/gi)) ? {
                         chaine: enr[a[1]]
                     } : {
                         nombre: enr[a[1]]
@@ -374,7 +374,7 @@ function Interpreter() {
                 }
             } else if (enr[expr.attribut] !== undefined) {
                 // attribut "simple" présent dans l'entete
-                return (enr[expr.attribut].match && !enr[expr.attribut].match(/[\d]+$/gi)) ? {
+                return (enr[expr.attribut].match && !enr[expr.attribut].match(/^[\d]+$/gi)) ? {
                     chaine: enr[expr.attribut]
                 } : {
                     nombre: enr[expr.attribut]
