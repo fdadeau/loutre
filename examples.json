@@ -1,27 +1,27 @@
 {
     "Cabinet médical": {
         "MEDECIN": {
-            "Matricule": [526736, 943223, 126389, 467421],
-            "Nom": ["House", "Foreman", "Hadley", "Cameron"]
+            "Matricule": [526736, 943223, 126389],
+            "Nom": ["House", "Foreman", "Hadley"]
         },
         "PATIENT": {
             "NumSecu": [18012025324421, 28403039213753],
             "Nom": ["Larry Golade", "Paule Tergeist"]
         },
         "CONSULTATION": {
-            "NumCons": [1, 2, 3, 4, 5],
-            "Date": [20201226, 20210104, 20210104, 20210105, 20210106],
-            "Medecin": [526736, 126389, 126389, 943223, 526736],
-            "Patient": [18012025324421, 28403039213753, 28403039213753, 18012025324421, 18012025324421]
+            "NumCons": [1, 2, 3, 4, 5, 6],
+            "Date": [20201226, 20210104, 20210104, 20210105, 20210106, 20210107],
+            "Medecin": [526736, 126389, 126389, 943223, 526736, 126389],
+            "Patient": [18012025324421, 28403039213753, 28403039213753, 18012025324421, 18012025324421, 18012025324421]
         },
         "MEDICAMENT": {
             "CodeMedicament": ["PMB2000", "PMC30", "DDB100"],
             "Libelle": ["Pasmalaubide", "Pasmalaucrane", "Dortdebout"]
         },
         "PRESCRIPTION": {
-            "NumCons": [1, 1, 2, 3],
-            "Medicament": ["PMB2000", "PMC30", "PMC30", "PMB2000"],
-            "NbPrises": [2, 1, 1, 1]    
+            "NumCons": [1, 1, 2, 3, 6],
+            "Medicament": ["PMB2000", "PMC30", "PMC30", "PMB2000", "DDB100"],
+            "NbPrises": [2, 1, 1, 1, 1]    
         }
     },
     
