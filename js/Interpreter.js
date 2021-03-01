@@ -331,6 +331,17 @@ function Interpreter() {
             if (!tous) {
                 continue;
             }
+            
+            // vérification que l'enregistrement n'existe pas déjà dans le résultat
+            var exists = false;
+            for (var k=0; k < res[entete[0]].length; k++) {
+                if (entete.every(e => res[e][k] == enr1[e])) {
+                    exists = true;
+                }
+            }
+            if (exists) {
+                continue;   
+            }
             // on recopie
             entete.forEach(e => {
                 res[e].push(enr1[e]);
