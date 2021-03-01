@@ -359,7 +359,7 @@ function Interpreter() {
                 // attribut == RELATION.NomAttribut
                 if (enr[expr.attribut]) {
                     // prefixe issu d'une autre relation, mais présent dnas la relation actuelle
-                    return (enr[expr.attribut]) ? {
+                    return (enr[expr.attribut] && enr[expr.attribut].match && !enr[expr.attribut].match(/^[\d]+$/gi)) ? {
                         chaine: enr[expr.attribut]
                     } : {
                         nombre: enr[expr.attribut]
