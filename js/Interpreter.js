@@ -47,7 +47,7 @@ function Interpreter() {
         // remplissage
         for (var i = 0; i < operande1.cardinalite(); i++) {
             var enr = operande1.extraireEnregistrement(i);
-            if (which == "union" || which == "inter" && operande2.contient(enr) >= 0 || which == "minus" && operande2.contient(enr) < 0) {
+            if (which == "union" || which == "intersect" && operande2.contient(enr) >= 0 || which == "except" && operande2.contient(enr) < 0) {
                 for (var att in enr) {
                     res[att].push(enr[att]);
                 }

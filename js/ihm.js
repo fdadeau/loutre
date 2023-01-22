@@ -321,8 +321,8 @@ document.addEventListener("DOMContentLoaded", function (_e) {
                 }
                 return interpreter.applyCopy(relations[commande.source]);
             case "union":
-            case "minus":
-            case "inter":
+            case "except":
+            case "intersect":
                 if (!relations[commande.operande1]) {
                     throw `La relation ${commande.operande1} n'existe pas.`;
                 }

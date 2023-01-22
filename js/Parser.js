@@ -38,9 +38,9 @@ function Parser() {
         }
 
         /* *************************************************************
-         *             Cas simples : UNION, INTER, MINUS
+         *             Cas simples : UNION, INTERSECT, EXCEPT (MINUS)
          ************************************************************* */
-        ["union","inter","minus","div", "pcart"].forEach(function(e) {
+        ["union","intersect","except","div", "pcart"].forEach(function(e) {
             var indexOfBinaryOp = expression.toLowerCase().indexOf(" " + e + " ");
             if (indexOfBinaryOp >= 0) {
                 var operande1 = expression.substring(0, indexOfBinaryOp).trim();
