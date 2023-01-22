@@ -1,4 +1,4 @@
-# loutre
+# LOUTRE
 LOUTRE est L'Outil Ultime pour la Théorie RelationnellE
 
 LOUTRE offre les fonctionnalités suivantes : 
@@ -9,4 +9,4 @@ LOUTRE offre les fonctionnalités suivantes :
 - application d'opérateurs de la théorie relationnelle (sélection, projection, jointure, division)
 - chargement des exemples utilisés dans le cours et les TD de l'UE de bases de données (L1 UFR ST Besancon)
 
-Pour utiliser cet outil : https://github.io/fdadeau/loutre
+Pour utiliser cet outil : https://fdadeau.github.io/loutre
