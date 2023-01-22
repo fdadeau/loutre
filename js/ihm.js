@@ -164,7 +164,14 @@ document.addEventListener("DOMContentLoaded", function (_e) {
     
     var parser = new Parser();
     
-    document.getElementById("btnExecuter").addEventListener("click", function(e) {
+    document.getElementById("btnExecuter").addEventListener("click", runQuery);
+    document.getElementById("query").addEventListener("keydown", function(e) {
+        if (e.key == "Enter") {
+            runQuery();
+        }
+    });
+    
+    function runQuery(e) {
         try {
             var query = document.getElementById("query").value
             var commande = parser.parse(query);
@@ -188,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function (_e) {
             alert(e);
             document.getElementById("query").focus();
         }
-    });
+    }
     
     
     
