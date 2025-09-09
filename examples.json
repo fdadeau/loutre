@@ -10,7 +10,7 @@
         },
         "CONSULTATION": {
             "NumCons": [1, 2, 3, 4, 5, 6],
-            "Date": [20201226, 20210104, 20210104, 20210105, 20210106, 20210107],
+            "Date": [20241226, 20250104, 20250104, 20250105, 20250106, 20250107],
             "Medecin": [526736, 126389, 126389, 943223, 526736, 126389],
             "Patient": [18012025324421, 28403039213753, 28403039213753, 18012025324421, 18012025324421, 18012025324421]
         },
@@ -28,31 +28,31 @@
     "Scolarité": {
         "ETUDIANT" : {
             "NoEtudiant": [ 23794, 32911, 33818, 34812 ], 
-            "Nom": [ "Artemia", "Grandet", "Colin", "Mollenski" ], 
-            "Prenom": [ "Adrien", "Simon", "Cynthia", "Marie"],
-            "DateNaissance": [ 19980818, 19989226, 19989596, 19981121 ],
-            "Login": [ "aartemia", "sgrandet", "ccolin", "mmollens" ],
-            "MotDePasse": [ "1234", "azerty", "pouet", "prout" ]            
+            "Nom": [ "Addams", "Barclay", "Petroplus", "Sinclair" ], 
+            "Prenom": [ "Wednesday", "Bianca", "Ajax", "Enid"],
+            "DateNaissance": [ 20020927, 19950417, 20020526, 20020402 ],
+            "Login": [ "waddams", "bbarclay", "apetropl", "esinclai" ],
+            "MotDePasse": [ "aae446086f8e", "83de6260ed", "2705a83a5a065", "90f1d43e841" ]            
         },
         "INSCRIPTION" : {
             "NoEtudiant": [ 23794, 23794, 32911, 32911, 33818, 34812, 34812 ],
-            "CodeModule": [ "BD_L1", "APOO_L1", "BD_L1", "APOO_L1", "APOO_L1", "BD_L1", "BD_L1" ],
-            "Annee": [ 2018, 2018, 2018, 2018, 2018, 2018, 2019 ],
+            "CodeModule": [ "BD_L1", "PROG_L1", "BD_L1", "PROG_L1", "PROG_L1", "BD_L1", "BD_L1" ],
+            "Annee": [ 2024, 2024, 2024, 2024, 2024, 2024, 2025 ],
             "Resultat": [ 15, 12, 8, 10, 13, 5, 18 ] 
         },
         "MODULE": {
-            "CodeModule": [ "BD_L1", "APOO_L1", "TCIP_L3" ],
-            "LibelleModule": [ "Bases de données", "Algo et POO", "Techniques de communication" ],
-            "VolumeCM": [ 18, 21, 9 ],
-            "VolumeTD": [ 18, 15, 0 ],
+            "CodeModule": [ "BD_L1", "PROG_L1", "WEB_L3" ],
+            "LibelleModule": [ "Bases de données", "Programmation 1", "Web 4" ],
+            "VolumeCM": [ 18, 18, 9 ],
+            "VolumeTD": [ 18, 18, 0 ],
             "VolumeTP": [ 18, 18, 18 ],
-            "Responsable": [ 1234, 5678, 4321 ]
+            "Responsable": [ 1234, 4321, 1234 ]
         },
         "ENSEIGNANT": {
             "NoHarpege": [1234, 5678, 4321, 8765],
-            "Nom": [ "Dedos", "Jeunet", "Paquet", "Couchette"],
-            "Prenom": ["Fred", "Nicolas", "Guillaume", "Jean-François"],
-            "Statut": ["MCF", "MCF", "PAST", "PU" ]
+            "Nom": [ "Dedos", "Jeunet", "Henri" ],
+            "Prenom": ["Fred", "Nicolas", "Julien" ],
+            "Statut": ["MCF", "MCF", "PU" ]
         }
     }
     
