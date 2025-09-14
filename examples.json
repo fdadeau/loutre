@@ -49,7 +49,7 @@
             "Responsable": [ 1234, 4321, 1234 ]
         },
         "ENSEIGNANT": {
-            "NoHarpege": [1234, 5678, 4321, 8765],
+            "NoHarpege": [1234, 5678, 4321 ],
             "Nom": [ "Dedos", "Jeunet", "Henri" ],
             "Prenom": ["Fred", "Nicolas", "Julien" ],
             "Statut": ["MCF", "MCF", "PU" ]
