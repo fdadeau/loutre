@@ -54,6 +54,22 @@
             "Prenom": ["Fred", "Nicolas", "Julien" ],
             "Statut": ["MCF", "MCF", "PU" ]
         }
-    }
+    },
     
+    "Cinéma": {
+        "FILM": {
+            "fID": [1, 2, 3, 4, 5, 6, 7],
+            "fRealisateur": [ ]
+        },
+        "PERSONNE": {
+            "pID": [1, 2, 3, 4, 5, 6 , 7, 8],
+            
+        },
+        "CASTING": {
+
+        }, 
+        "PROJECTION": {
+
+        }
+    }
 }

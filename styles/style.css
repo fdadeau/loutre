@@ -94,6 +94,7 @@ nav {
     min-width: 14rem;
     box-shadow: 5px 0px 20px 6px #888;
     z-index: 1001;
+    overflow-y: scroll;
 }
 
 nav li {
