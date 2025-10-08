@@ -26,8 +26,10 @@ document.addEventListener("DOMContentLoaded", function (_e) {
     // Ensemble des exemples du cours, chargés depuis le fichier "examples.json" à la racine du projet.
     var examples = {};
     
+    const FILE = document.location.search.substring(1);
+    
     // chargement des modèles d'exemple 
-    fetch("./examples.json").then(function(response) {
+    fetch((FILE.length == 0) ? "./examples.json" : `./${FILE}.json`).then(function(response) {
         var contentType = response.headers.get("content-type");
         if (contentType && contentType.indexOf("application/json") !== -1) {
             return response.json().then(function (json) {
