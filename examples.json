@@ -35,10 +35,10 @@
             "MotDePasse": [ "aae446086f8e", "83de6260ed", "2705a83a5a065", "90f1d43e841" ]            
         },
         "INSCRIPTION" : {
-            "NoEtudiant": [ 23794, 23794, 32911, 32911, 33818, 34812, 34812 ],
-            "CodeModule": [ "BD_L1", "PROG_L1", "BD_L1", "PROG_L1", "PROG_L1", "BD_L1", "BD_L1" ],
-            "Annee": [ 2024, 2024, 2024, 2024, 2024, 2024, 2025 ],
-            "Resultat": [ 15, 12, 8, 10, 13, 5, 18 ] 
+            "NoEtudiant": [ 23794, 23794, 32911, 32911, 33818, 34812, 34812, 33818 ],
+            "CodeModule": [ "BD_L1", "PROG_L1", "BD_L1", "PROG_L1", "PROG_L1", "BD_L1", "BD_L1", "BD_L1" ],
+            "Annee": [ 2024, 2024, 2024, 2024, 2024, 2024, 2025, 2024 ],
+            "Resultat": [ 15, 12, 8, 10, 13, 5, 18, 14 ] 
         },
         "MODULE": {
             "CodeModule": [ "BD_L1", "PROG_L1", "WEB_L3" ],
